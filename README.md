@@ -58,8 +58,35 @@ make lint         # run static analysis
 ├── cmd/goboxd/   binary entry point
 ├── internal/     private application packages
 ├── docs/         api, languages, security, benchmarks, architecture
+
 └── tests/        integration tests
 ```
+
+
+## How It Works
+
+1. A user sends source code through an HTTP request.
+2. The service creates an isolated sandbox.
+3. The code is compiled and executed safely.
+4. Resource limits are enforced.
+5. Execution results are returned to the user.
+
+## Security Features
+
+- Linux namespaces
+- cgroups isolation
+- Resource limits
+- Bounded concurrency
+- Containerized execution
+
+## Future Improvements
+
+- Support additional programming languages
+- Web dashboard
+- Authentication and authorization
+- Execution history
+- Kubernetes deployment
+
 
 ## Contributing
 
